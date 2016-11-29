@@ -10,8 +10,13 @@ require_once 'app/start.php';
 <body>
         <h2>Welcome to the DIR Listing</h2>
         <?php
-	        $ignore_folders = array('dashboard', 'img', 'webalizer', 'xampp', 'tk421');
+        	// Add Folders to ignore
+	        $ignore_folders = array();
+	        
+	        // Add files to ignore
 	        $ignore_files = array();
+
+	        // Don't edit below here
 	        $dirs = array_filter(glob('*'), 'is_dir');
 	        $files = array_filter(glob('*'), 'is_file');
 	        echo '<ul>';
